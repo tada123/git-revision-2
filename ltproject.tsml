@@ -1,0 +1,37 @@
+
+#Easy settings:
+project_name = "git-revision-2"
+binary_name = "git-revision-2"
+
+debugger = "/usr/bin/gdb"
+browser = "firefox" #Browser to test your webpage
+
+
+#Advanced settings:
+#######################################################
+
+project:
+    name = "$project_name;"
+
+    opts:
+        debug = true
+    languages:
+        "HTML"
+        "CSS"
+        "JavaScript"
+            
+    targets:
+        target:
+            name = "$project_name"
+            files:
+                "index.html"
+
+    main_target = "$project_name"
+    clear:
+        command = ""
+    build:
+        command = ""
+    debug:
+        command = "$browser; $testurl"
+
+
